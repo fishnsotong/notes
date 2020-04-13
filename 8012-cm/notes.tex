@@ -1,0 +1,116 @@
+%% File              : notes.tex
+%% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
+%% Date              : 2020-04-12T16:57:32+0800
+%% Last Modified Date: 2020-04-14T01:37:02+0800
+%% Last Modified By  : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
+
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{physics}
+\usepackage{titlesec}
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{Corollary}
+\numberwithin{corollary}{section}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{postulate}{Postulate}
+\numberwithin{postulate}{section}
+\newtheorem*{postulate*}{Postulate}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{section}
+\newtheorem*{lemma*}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\numberwithin{definition}{section}
+\newtheorem*{definition*}{Definition}
+
+\titleformat
+{\part} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Lecture \ \thepart} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+%% Preference for boldface vectors
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\let\oldhat\hat
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\title{8.012 Lecture Notes}
+\author{Wayne Yeo Wei Zhong}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  This class is an introduction to classical mechanics for students who are
+  comfortable with calculus. Familiarity with vectors and differential equations
+  are not assumed. The main topics are:
+  vectors, kinematics, forces, motion, momentum, energy, angular motion, angular
+  momentum, gravity, planetary motion, moving frames, and the motion of rigid
+  bodies. The course follows the book \emph{An Introduction to Mechanics} by
+  Kleppner and Kolenkow.
+\end{abstract}
+\tableofcontents
+\newpage
+
+\part{Vectors and Kinematics}
+
+\setcounter{section}{0}
+\section{Vectors}
+
+\subsection{Vector Algebra}
+
+\begin{definition*}
+  A \emph{vector} is a set of numbers accompanied by rules for how they change
+  when the coordinate system is changed. For our purposes, we use a geometric
+  definition: a vector is a \emph{directed line segment} with scale length and
+  direction.
+\end{definition*}
+
+\subsubsection{Basic operations}
+
+\paragraph{Unit vectors.} If the length of a vector is one unit, we call it a
+unit vector. The vector of unit length parallel to $\vec{A}$ is $\hat{A}$. It
+follows that \[
+  \hat{A} = \frac{\vec{A}}{A}.
+\]
+
+Since we know that both $\vec{A}$ and $A$ have units of length, we can conclude
+that $\hat{A}$ has units $L/L = 1$. The physical dimension of a vector is
+carried by its magnitude, and unit vectors are dimensionless.
+
+\paragraph{Scalar multiplication.} $\vec{C} = b\vec{A}$ If $b > 0$, $C$ is
+parallel to $A$ and thus share the same unit vector.
+
+If $b < 0$, then $\vec{C} = b\vec{A}$ is antiparallel to $\vec{A}$ 
+
+\paragraph{Vector addition.} The geometrical interpretation shown in the book is
+the tip-to-tail method.
+
+\paragraph{Vector subtraction.} $\vec{A} - \vec{B} = \vec{A} + (- \vec{B})$
+
+\paragraph{Algebraic properties of vectors.}
+
+\subsubsection{Multiplying vectors}
+
+\section{Kinematics}
+
+\end{document}

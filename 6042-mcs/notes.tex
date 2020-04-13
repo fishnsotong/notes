@@ -1,0 +1,77 @@
+%% File              : notes.tex
+%% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
+%% Date              : 2020-04-12T16:57:32+0800
+%% Last Modified Date: 2020-04-14T01:36:23+0800
+%% Last Modified By  : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
+
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{physics}
+\usepackage{titlesec}
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{Corollary}
+\numberwithin{corollary}{section}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{postulate}{Postulate}
+\numberwithin{postulate}{section}
+\newtheorem*{postulate*}{Postulate}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{section}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{definition}{Definition}
+\numberwithin{definition}{section}
+\newtheorem*{definition*}{Definition}
+
+\titleformat
+{\part} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Part \ \thepart} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\title{6.042 Lecture Notes}
+\author{Wayne Yeo Wei Zhong}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  This course covers elementary discrete mathematics for computer science and
+  engineering. It emphasizes mathematical proofs and definitions as well as
+  applicable methods. Topics include formal logic notation, proof methods;
+  induction, well-ordering; sets, relations; elementary graph theory; integer
+  congruences; asymptotic notation and growth of functions; permutations and
+  combinations, counting principles; discrete probability. Further selected
+  topics include recursive definition and structural induction; state machines
+  and invariants; recurrences; generating functions.
+\end{abstract}
+\tableofcontents
+\newpage
+
+\part{Proofs}
+
+\setcounter{section}{0}
+\section{Introduction to mathematical proofs}
+
+\subsection{Introduction to mathematical proofs}
+
+\subsubsection{Bases and linear independence}
+
+\end{document}
