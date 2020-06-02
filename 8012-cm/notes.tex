@@ -1,7 +1,7 @@
 %% File              : notes.tex
 %% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
 %% Date              : 2020-04-12T16:57:32+0800
-%% Last Modified Date: 2020-04-14T01:37:02+0800
+%% Last Modified Date: 2020-04-16T02:06:42+0800
 %% Last Modified By  : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
 
 \documentclass{article}
@@ -29,6 +29,9 @@
 \numberwithin{definition}{section}
 \newtheorem*{definition*}{Definition}
 
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
 \titleformat
 {\part} % command
 [display] % shape
@@ -49,6 +52,16 @@
 \renewcommand{\vec}[1]{\mathbf{#1}}
 \let\oldhat\hat
 \renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\urlstyle{same}
 
 \DeclareMathOperator{\E}{\mathbb{E}}
 
@@ -74,6 +87,63 @@
 \part{Vectors and Kinematics}
 
 \setcounter{section}{0}
+
+\section{Introduction to Classical Mechanics}
+
+\subsection{Scope and limits of classical mechanics}
+
+Classical mechanics is the study of \emph{motion} due to given forces, and aims
+to establish some general rules regarding them. Some systems of interest
+include: gravity, springs, pulleys, rigidity and friction.
+
+\subsubsection{Extraordinary richness of phenomena}
+
+\begin{itemize}
+  \item Orbital mechanics: sensitivity to initial conditions, Venus' spin
+    \href{https://www.nature.com/articles/35071000}{[10.1038/35071000]}
+  \item Euler's Disk
+  \item Rattleback
+\end{itemize}
+
+\subsubsection{Limits}
+
+\begin{itemize}
+  \item large velocities -- special relativity
+  \item large distances, very strong gravity -- general relativity
+  \item \underline{fields}, radiation
+  \item very small distances, structure of matter -- quantum mechanics
+\end{itemize}
+
+\textbf{BUT} we can see that the following concepts that are present in other
+fields of physics build on our understanding of them in classical mechanics.
+
+\begin{itemize}
+  \item $\vec{p}$ (momentum)
+  \item $E$ (energy)
+  \item $\vec{L}$ (angular momentum)
+  \item symmetry
+\end{itemize}
+
+Careful definition of displacement, force and time are important. Correspondence
+principle.
+
+\section{Elementary concepts of classical mechanics}
+
+\subsubsection{Model of space}
+
+\subsubsection{Model of time}
+
+\subsubsection{Model of matter}
+
+To summarise the past three subsections, we can arrive at a particularly cogent
+definition on the nature of classical mechanics.
+
+\begin{definition*}
+  \emph{Classical mechanics} is the study of mechanics concerning the motion of
+  point masses in Euclidean geometric space under absolute, non-relativistic
+  time.
+\end{definition*}
+
 \section{Vectors}
 
 \subsection{Vector Algebra}
@@ -111,6 +181,21 @@ the tip-to-tail method.
 
 \subsubsection{Multiplying vectors}
 
+\subsection{Rectangular coordinates}
+
+The vector operations in the previous section were defined \emph{independently}
+of any particular coordinate system. To invoke the concrete, physical nature of
+analytic geometry, we now choose the rectangular (Cartesian) coordinate system
+to work with for its simplicity and ease of visualization.
+
+\subsubsection{Components of vectors}
+
+\subsubsection{Base vectors}
+
 \section{Kinematics}
+
+\subsection{The position vector $\vec{r}$ and Displacement}
+
+\subsection{Velocity and Acceleration}
 
 \end{document}
