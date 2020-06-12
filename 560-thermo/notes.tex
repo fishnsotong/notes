@@ -1,0 +1,154 @@
+%% File              : notes.tex
+%% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
+%% Date              : 2020-04-12T16:57:32+0800
+%% Last Modified Date: 2020-06-05T03:26:52+0800
+%% Last Modified By  : Wayne Yeo [fishnsotong@gosigs] <wwzyeo@gmail.com>
+
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{physics}
+\usepackage{titlesec}
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{Corollary}
+\numberwithin{corollary}{section}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{postulate}{Postulate}
+\numberwithin{postulate}{section}
+\newtheorem*{postulate*}{Postulate}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{section}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{definition}{Definition}
+\numberwithin{definition}{section}
+\newtheorem*{definition*}{Definition}
+
+\titleformat
+{\part} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Part \ \thepart} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\title{5.60 Thermodynamics and Kinetics}
+\author{Wayne Yeo Wei Zhong}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  This course deals primarily with equilibrium properties of macroscopic
+  systems, basic thermodynamics, chemical equilibirum of reactions in gas and
+  solution phase, and rates of chemical reactions.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\part{Thermodynamics}
+
+\setcounter{section}{0}
+\section{States, equations of state, 0th law}
+
+\subsection{Laws of thermodynamics}
+
+\paragraph{0th law of thermodynamics.} If $A$ and $B$ are in thermal equilibrium
+and $B$ and $C$ are in thermal equilibrium, then $A$ and $C$ are in thermal equilibrium.
+\textit{Defines Kelvin scale.}
+
+\paragraph{1st law of thermodynamics.} $U$ is conserved. \textit{You can break
+even.}
+
+\begin{equation}
+  \mathrm{d}w + \mathrm{d}q = \mathrm{d}U
+\end{equation}
+
+\paragraph{2nd law of thermodynamics.} Defines entropy and the direction of
+time. \textit{You can break even at 0 K}.
+
+\begin{equation}
+  \Delta S = \int \frac{\textnormal{d} q_{\mathrm{rev}}}{T}
+\end{equation}
+
+\paragraph{3rd law of thermodynamics.} Defines the absolute scale of $T$. For
+pure crystal, $S \rightarrow 0$ as $T \rightarrow 0$. \textit{You can never
+reach 0 K}.
+
+\subsection{Definitions}
+
+\subsubsection{Types of systems}
+\begin{itemize}
+  \item Open systems (free transfer of energy and matter).
+  \item Closed systems (free transfer of energy, but not matter).
+  \item Isolated systems (no transfer of energy and matter).
+\end{itemize}
+
+\subsubsection{Types of properties}
+\begin{itemize}
+  \item{Intensive properties}
+  \item{Extensive properties}
+\end{itemize}
+
+
+\subsection{Properties of gases}
+
+\paragraph{Ideal gas law. }
+\begin{equation}
+  pV = nRT
+\end{equation}
+
+\paragraph{Van der Waals equation of state.} Extension of the ideal gas equation
+to account for intermolecular interactions, where $\overline{V}$ denotes molar
+volume. 
+
+\begin{equation}
+  \left( p + \frac{a}{\overline{V}^2} \right) (\overline{V} - b) = RT 
+\end{equation}
+
+Notice that Equation 4 reduces to $pV = nRT$ when $\overline{V}$ is large.
+
+\section{Work, heat, first law}
+
+\section{Internal energy, expansion work}
+
+\section{Enthalpy}
+
+\begin{equation}
+  H := U + pV
+\end{equation}
+
+
+\part{Kinetics}
+
+\section{Introduction to reaction kinetics}
+
+\subsection{Defining reaction rate}
+
+\paragraph{Reaction rate.} For a given reaction $\mathrm{aA} + \mathrm{bB}
+\rightarrow \mathrm{cC} + \mathrm{dD}$, the reaction rate is
+
+\begin{equation}
+  -\frac{1}{\mathrm{a}} \frac{\mathrm{d[A]}}{\mathrm{d}t} 
+\end{equation}
+
+\paragraph{Half-life.} $t_{1/2}$ is the time at which $[\mathrm{A}] =
+0.5[\mathrm{A}]_0$.
+
+
+\end{document}

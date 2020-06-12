@@ -1,0 +1,870 @@
+% File              : notes.tex
+% Author            : Wayne Yeo [fishnsotong@gosigs] <wwzyeo@gmail.com>
+% Date              : 2017-10-23T12:14:13+0800
+% Last Modified Date: 2020-06-12T17:36:27+0800
+% Last Modified By  : Wayne Yeo [fishnsotong@gosigs] <wwzyeo@gmail.com>
+
+\documentclass{article}
+
+\usepackage{amsmath,amssymb} \usepackage[margin=0.5in]{geometry}
+
+\setlength{\parindent}{0pt} \setlength{\parskip}{1.5pt}
+
+\begin{document}
+
+\section*{Physics}
+
+\section{Measurement}
+
+\paragraph{Base units.} \begin{tabular}{|l|l|l|} \hline \textbf{Name} &
+  \textbf{Symbol} & \textbf{Measure} \\ \hline metre & \text{m} & length \\
+  kilogram & \text{kg} & mass \\ second & \text{s} & time \\ ampere & \text{A} &
+  electric current \\ kelvin & \text{K} & thermodynamic temperature \\ mole &
+\text{mol} & amount of substance \\ candela & \text{cd} & luminous intensity
+(not in syllabus) \\ \hline \end{tabular}
+
+\paragraph{Prefixes.} \begin{tabular}{|l|llllllllll|} \hline \textbf{Symbol} & p
+  & n & $\mu$ & m & c & d & k & M & G & T \\ \hline \textbf{Prefix} & pico &
+  nano & micro & milli & centi & deci & kilo & mega & giga & tera \\
+  \textbf{Quantity} & $10^{-12}$ & $10^{-9}$ & $10^{-6}$ & $10^{-3}$ & $10^{-2}$
+  & $10^{-1}$ & $10^3$ & $10^6$ & $10^9$ & $10^{12}$ \\ \hline \end{tabular}
+
+\paragraph{Principle of Homogenity.} The units of quantities on both sides of an
+equation must be the same.
+
+\paragraph{Systematic Errors.} Errors of measurements that occur according to
+some `fixed rule or pattern' such that they yield a consistent over-estimation
+or under-estimation of the true value.
+
+\paragraph{Random Errors.} Errors with different magnitudes and signs in
+repeated measurements.
+
+\paragraph{Precision.} Extent or limit of sensitivity of a given instrument to
+obtain the readings of the physical quantity being measured.
+
+\paragraph{Accuracy.} How close a measured value is from the true value.
+
+\paragraph{Consequential Uncertainties.} For \textbf{addition} and
+\textbf{subtraction}, $\Delta R = \Delta R_1 + \Delta R_2 + \ldots$. For
+\textbf{multiplication} and \textbf{division}, $\frac{\Delta R}{R} =
+\frac{\Delta R_1}{R_1} + \frac{\Delta R_2}{R_2} + \ldots$.
+
+\section{Newtonian Mechanics}
+
+\subsection{Kinematics}
+
+\paragraph{Displacement ($s$).} Shortest distance from initial to final position
+of a body.
+
+\paragraph{Velocity ($v$).} Rate of change of displacement ie. $v =
+\frac{\mathrm{d}s}{\mathrm{d}t}$.
+
+\paragraph{Acceleration ($a$).} Rate of change of velocity ie. $a =
+\frac{\mathrm{d}v}{\mathrm{d}t} = \frac{\mathrm{d}^2s}{\mathrm{d}t^2}$.
+
+\paragraph{Basic Equations of Kinematics.} Applicable only if $a$ is constant.
+Taking $u$ as initial velocity and $v$ as final velocity,
+
+\begin{equation} v = u + at \end{equation} \begin{equation} s = \frac{1}{2}(u +
+  v)t \end{equation} \begin{equation} s = ut + \frac{1}{2}at^2 \end{equation}
+    \begin{equation} v^2 = u^2 + 2as \end{equation}
+
+\subsection{Dynamics}
+
+\paragraph{Inertia.} Reluctance of a body to change its state of rest or motion.
+
+\paragraph{Linear momentum ($p$).} $p = mv$ where $m$ is the mass of the body
+and $v$ is the velocity of the body.
+
+\paragraph{Newton's First Law.} Every body continues in its state of rest or
+uniform motion in a straight line unless an unbalanced force acts on it to
+change that state.
+
+\paragraph{Newton's Second Law.} The rate of change of momentum of a body is
+proportional to the unbalanced force acting on it, and occurs in the direction
+of the force ie. $F \propto \frac{\mathrm{d}p}{\mathrm{d}t}$.
+
+\paragraph{Newton's Third Law.} If a body exerts a force on another body, then
+that body will exert an equal and opposite force on the first body.
+Action-reaction forces must satisfy these conditions:
+
+\begin{enumerate} \item Equal in magnitude \item Oppositely directed \item Act
+on two different bodies \item Be of the same type \end{enumerate}
+
+\paragraph{Impulse ($J$).} $J = \int^{t_2}_{t_1} \! F \, \mathrm{d}{t}$
+
+\paragraph{Impulse-Momentum Theorem.} Impulse is equal to the change in
+momentum. Consequently, \begin{equation} F_{av} = \frac{\Delta p}{\Delta t}
+\end{equation}
+
+\paragraph{Principle of Conservation of Momentum.} The total momentum of a
+system is conserved provided no external unbalanced force acts on the system ie.
+$p_\text{initial} = p_\text{final}$.
+
+\paragraph{Elastic Collision}. Kinetic energy of a system is conserved.
+Consequently, the relative velocity of approach is equal to the relative
+velocity of separation.
+
+\paragraph{Inelastic Collision.} Refer to the definition of an elastic
+collision. For a totally inelastic collision, coalescence occurs.
+
+\subsection{Forces}
+
+\paragraph{Hooke's Law.} The force acted on by a spring is equal to
+\begin{equation} F = -kx \end{equation} where $k$ is the spring constant (N/m)
+  and $x$ is the deformation (m). Correspondingly, the elastic potential energy
+  stored in springs is $\frac{1}{2}kx^2$, or $\frac{F^2}{2k}$.
+
+\paragraph{Hydrostatic Pressure ($p$).} Pressure acting on an object due to a
+fluid column above it. \begin{equation} p = h \rho g \end{equation} where $h$ is
+  the height of the fluid column, $\rho$ is the density of fluid, and $g$ is the
+  gravitational field strength.
+
+\paragraph{Buoyancy/Upthrust ($U$).} Force acting upwards on an object submerged
+in a fluid. \begin{equation} U = h \rho gA = m_\text{fluid}g \end{equation}
+  where $h$ is the height of the fluid column, $A$ is the cross-sectional area
+  of the fluid column displaced, $\rho$ is the density of fluid displaced, and
+  $m_\text{fluid}$ is the mass of the fluid column, and $g$ is the gravitational
+  field strength.
+
+\paragraph{Principle of Floatation.} A floating object will displace its own
+weight equivalent of the fluid it is floating on.
+
+\paragraph{Friction.} Force that resists the motion of one surface relative to
+another with which it is in contact.
+
+\paragraph{Drag/Viscous Force.} Internal friction in a fluid.
+
+\paragraph{Torque ($\tau$).} Product of the force and the perpendicular distance
+from the line of action of the force to the axis.
+
+Taking pivot about $A$ and a force applied at $B$, $\tau = rF\sin\theta$ where
+$\tau$ is the torque, $r$ is the distance $AB$ and $\theta$ is the angle between
+$AB$ and $F$.
+
+\paragraph{Couple.} A pair of equal and oppositely-directed forces whose lines
+of actions do not coincide.
+
+\paragraph{Equilibrium.} A body is said to be in equilibrium if these two
+conditions are met:
+
+\begin{enumerate} \item Translation equilibrium ie. $\sum F = 0$.  \item
+Rotational equilibrium ie. $\sum \tau = 0$.  \end{enumerate}
+
+\subsection{Work, Energy and Power}
+
+\paragraph{Work Done ($W$).} Product of the magnitude of the displacement and
+the component of the force parallel to the displacement. The work done by a
+force $F$ in moving an object by $\Delta x$ is \begin{equation} W =
+  F\cos\theta(\Delta x) \end{equation} where $\theta$ is the angle between $F$
+  and $\Delta x$.
+
+\paragraph{Kinetic Energy ($E_k$).} The kinetic energy of an object is
+\begin{equation} E_k = \frac{1}{2}mv^2 \end{equation} where $m$ is the mass of
+  the object
+
+\paragraph{Gravitational Potential Energy ($U$).} (This is valid only near the
+Earth's surface.) The gravitational potential energy of an object is
+\begin{equation} U = mgh \end{equation} where $m$ is the mass of the object, $g$
+  is the gravitational field strength, and $h$ is the height of the object
+  relative to the ground.
+
+\paragraph{Power ($P$).} Rate at which work is done, or which energy is
+transferred. \begin{equation} P = \frac{\mathrm{d}W}{\mathrm{d}t} = Fv
+\end{equation}
+
+\paragraph{Efficiency ($\gamma$).} Ratio of useful work performed by a machine
+or process. \begin{equation} \gamma = \frac{P_w}{P_i} = \frac{E_w}{E_i}
+\end{equation}
+
+\subsection{Motion in a Circle}
+
+\paragraph{Angular Displacement ($\theta$).} Angle through which the object
+moves on a circular path. \begin{equation} \theta = \frac{s}{r} \end{equation}
+  where $s$ is the arc length and $r$ is the radius of the circular path.
+
+\paragraph{Angular Velocity ($\omega$).} Rate of change of angular position of a
+rotating body. \begin{equation} \omega = \frac{\mathrm{d}\theta}{\mathrm{d}t} =
+\frac{2\pi}{T} = 2\pi f \end{equation}
+
+\paragraph{Tangential Velocity ($v = r\omega$).} Component of velocity
+tangential to path of movement.
+
+\paragraph{Centripetal Acceleration ($a$).} Acceleration of an object towards
+the centre of its circular path. \begin{equation} a = v\omega = r\omega^2 =
+\frac{v^2}{r} \end{equation}
+
+\paragraph{Centripetal Force ($F$).} Force acting on an object towards the
+centre of its circular path. \begin{equation} F = mr\omega^2 = m\frac{v^2}{r}
+\end{equation}
+
+\subsection{Gravitational Field}
+
+\paragraph{Law of Universal Gravitation.} The gravitational force $F$ between
+two particles of masses $M$ and $m$ with distance $r$ apart is \begin{equation}
+F = -\frac{GMm}{r^2} \end{equation} where $G$ is the universal gravitational
+constant.
+
+\paragraph{Gravitational Field Strength ($g$).} \textbf{Force per unit mass}
+acting on any mass placed at that point. \begin{equation} g = \frac{F}{m} =
+-\frac{GM}{r^2} \end{equation}
+
+\paragraph{Gravitational Potential Energy ($U$).} \textbf{Work done} by an
+external agent in bringing a test mass from infinity to a point without any
+change in kinetic energy (taking infinity as the zero reference).
+\begin{equation} F = -\frac{\mathrm{d}U}{\mathrm{d}r} \implies U =
+  -\frac{GMm}{r} \end{equation}
+
+\paragraph{Gravitational Potential ($\Phi$).} \textbf{Work done per unit mass}
+by an external agent in bringing an object from infinity to a point without any
+change in kinetic energy (taking infinity as the zero reference).
+\begin{equation} g = -\frac{\mathrm{d}\Phi}{\mathrm{d}r} \implies \Phi =
+  -\frac{GM}{r} \end{equation}
+
+\paragraph{Kepler's Third Law.} For a planet of mass $m$ orbiting around a sun
+of mass $M$ with distance $r$, \begin{equation} \frac{GMm}{r^2} = mr\omega^2 =
+  mr\left(\frac{2\pi}{T}\right)^2 \implies T^2 = \frac{4\pi^2}{GM}r^3 \implies
+  T^2 \propto r^3 \end{equation}
+
+\section{Thermal Physics}
+
+\subsection{Thermal Physics}
+
+\paragraph{Internal Energy ($U = \mathrm{KE} + \mathrm{PE}$).} The sum of
+\textbf{molecular kinetic energy} and \textbf{intermolecular potential energy}
+of all the atoms of molecules of the system.
+
+\paragraph{Zeroth Law of Thermodynamics.} If two bodies A and B are separately
+in thermal equilibrium with a third body C, then A and B are also in thermal
+equilibrium with each other.
+
+\paragraph{Empirical Scale.} Scales based on observation and experimental
+measurement of thermometric properties as they change with temperature.
+(Usually, two fixed points are used.) Empirical scales have two issues:
+\begin{enumerate} \item Linearity assumption leads to inaccuracy, as
+      thermometric property may not vary linearly to temperature changes \item
+Disagreement between different thermometers, as different thermometric
+properties vary in different ways to temperature changes \end{enumerate}
+
+\paragraph{Kelvin Scale.} Absolute zero (0 K) is used as the lower fixed point,
+and the triple point of water (273.16 K) is used as the upper fixed point.
+
+\paragraph{Celsius Scale.} Kelvin scale shifted such that 0.01 $^{\circ}$C is
+the triple point of water ie. $\theta/^{\circ}\mathrm{C} = T/K - 273.15$.
+
+\paragraph{Ideal Gas.} Perfect gas which obeys the combined gas law. Makes these
+assumptions:
+
+\begin{enumerate} \item \textbf{D}uration of impact among molecules and between
+    molecules, and walls of container is negligible \item \textbf{A}ttractive
+      forces among molecules are negligible. Hence, molecules do not exert
+      forces on each other except when they collide.  \item \textbf{V}olume of
+      the atoms or molecules is negligible compared with the volume occupied by
+    the gas.  \item \textbf{E}lastic collisions are present, so molecules bounce
+      off the walls of the container and each other without losing any kinetic
+      energy.  \end{enumerate}
+
+\paragraph{Real Gas.} Real gases approach the characteristics of an ideal gas at
+low pressure and high temperature.
+
+\paragraph{Combined Gas Law.} \begin{equation} \frac{p_1V_1}{T_1} =
+\frac{p_2V_2}{T_2} \end{equation} where $p$ is the pressure, $V$ is the volume
+occupied by the gas, and $T$ is the temperature of the gas.
+
+\paragraph{Ideal Gas Law.} \begin{equation} pV = nRT = NkT \end{equation} where
+  $n$ is number of moles, $R$ is the molar gas constant, $N$ is number of
+  molecules, and $k$ is the Boltzmann constant.
+
+\paragraph{Mean Translational Kinetic Energy.} \begin{equation} E_k =
+\frac{1}{2}mv_{rms}^2 = \frac{3}{2}kT \implies v_{rms} = \sqrt{\frac{3kT}{m}}
+\end{equation}
+
+\subsection{First Law of Thermodynamics}
+
+\paragraph{Heat Capacity ($C$).} Heat required to raise the temperature by 1 K.
+\begin{equation} Q = C\Delta\theta \end{equation}
+
+\paragraph{Specific Heat Capacity ($c$).} Heat required to raise the temperature
+of 1 kg of the substance by 1 K. \begin{equation} Q = mc\Delta\theta
+\end{equation}
+
+\paragraph{Specific Latent Heat of Fusion ($l_f$).} Heat required to change unit
+mass of the substance \textbf{from solid to liquid} state without a change in
+temperature. \begin{equation} Q = ml_f \end{equation}
+
+\paragraph{Specific Latent Heat of Vaporization ($l_v$).} (Similar to specific
+latent heat of fusion, but applies to a change in state \textbf{from liquid to
+vapour}). \begin{equation} Q = ml_v \end{equation}
+
+\paragraph{Kinetic Theory of Matter.} Macroscopic properties of matter:
+
+\begin{tabular}{|l|p{5cm}|p{5cm}|p{5cm}|} \hline & \textbf{Distance apart} &
+  \textbf{Motion} & \textbf{Internal energy} \\ \hline \textbf{Solid} & Arranged
+  close to each other in a regular pattern & Vibrations about their mean
+  positions & Vibrational KE and PE \\ \textbf{Liquid} & Slightly further apart
+  & Occurs in clusters and are free to slide around each other & Translational
+  KE and PE \\ \textbf{Gas} & Very far apart from each other & Move in a random
+  manner & Translational KE and PE \\ \hline \end{tabular}
+
+\paragraph{First Law of Thermodynamics.} The internal energy of a system depends
+only on its state, and the increase in internal energy of the system is the
+\textbf{sum} of the \textbf{heat supplied to the system} and the
+\textbf{external work done on the system} ie. $\Delta U = \Delta Q + \Delta W$.
+
+\paragraph{Molar Heat Capacity at Constant Volume ($c_{v,m}$).} \begin{equation}
+Q = nc_{v,m}\Delta T = \Delta U \end{equation}
+
+\paragraph{Molar Heat Capacity at Constant Pressure ($c_{p,m}$).}
+\begin{equation} Q = nc_{p,m}\Delta T = \Delta U + p\Delta V \end{equation}
+
+\begin{tabular}{|l|l|l|l|l|} \hline \textbf{Process} & \textbf{Characteristic} &
+  $\Delta U$ & $\Delta Q$ & $\Delta W$ \\ \hline Isochoric & Constant volume. &
+  $\Delta U = \Delta Q$ & $nc_{v,m}\Delta T$ & 0 \\ Isobaric & Constant
+  pressure. & $\Delta U = \Delta Q + \Delta W$ & $nc_{p,m}\Delta T$ & -$p\Delta
+  V$ \\ Isothermal & Constant temperature. & 0 & $-\Delta W$ & Area under graph.
+\\ Adiabatic & $\Delta Q = 0$ & $\Delta U = \Delta W$ & 0 & Area under graph. \\
+Cyclic & $\Delta U = 0$ & 0 & $-\Delta W$ & Enclosed area. \\ \hline
+\end{tabular}
+
+\section{Oscillations and Waves}
+
+\subsection{Oscillations}
+
+Types of oscillations: \begin{itemize} \item \textbf{Free oscillations} do not
+    experience any resistive forces \item \textbf{Damped oscillations}
+    experience resistive forces that dissipate the energy of the system over
+  time.  \item \textbf{Forced oscillations} are caused by the application of
+    external periodic forces.  \end{itemize}
+
+Considering the motion of an oscillating spring-mass system,
+
+\paragraph{Equilibrium Position.} Position at which no net force acts on the
+oscillating mass.
+
+\paragraph{Displacement ($x$).} Displacement of the oscillating mass from its
+equilibrium position.
+
+\paragraph{Amplitude ($x_0$).} Maximum possible displacement attained by the
+oscillating mass from the equilibrium position.
+
+\paragraph{Period ($T$).} Time taken for the system to undergo one complete
+oscillation.
+
+\paragraph{Frequency ($f = \frac{1}{T}$).} Number of complete cycles per unit
+time made by the oscillating mass.
+
+\paragraph{Angular Frequency ($\omega = 2\pi f$).}
+
+\paragraph{Simple Harmonic Motion.} Vibratory motion in which the
+\textbf{acceleration} of the system is \textbf{proportional} to its
+\textbf{displacement from the equilibrium position}, and acts in the opposite
+direction to the displacement. \begin{equation} a = -\omega^2 x \propto -x
+\end{equation} where $\omega^2 = \frac{k}{m}$ for a spring-mass system. The
+solutions for simple harmonic motion are $x = x_0\sin\omega t$ or $x =
+x_0\cos\omega t$.
+
+\paragraph{Velocity.} Taking $x = x_0\sin\omega t$, \begin{equation} v =
+\frac{\mathrm{d}x}{\mathrm{d}t} = \omega x_0\cos\omega t \implies v_0 = \omega
+x_0 \end{equation}
+
+Consequently, $v = \pm\omega\sqrt{x_0^2 - x^2}$.
+
+\paragraph{Acceleration.} Taking $x = x_0\sin\omega t$, \begin{equation} a =
+\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -\omega^2 x_0\sin\omega t \implies a_0 =
+\omega^2 x_0 \end{equation}
+
+\paragraph{Kinetic Energy.} \begin{equation} K = \frac{1}{2}m\omega^2 x_0^2
+\cos^2 \omega t \end{equation}
+
+\paragraph{Potential Energy.} \begin{equation} U = \frac{1}{2}kx^2 = \frac{1}{2}
+k (x_0\sin\omega t)^2 = \frac{1}{2}m\omega^2 x_0^2 \sin^2\omega t \end{equation}
+
+\paragraph{Total Energy.} \begin{equation} E = \frac{1}{2}m\omega^2
+x_0^2\cos^2\omega t + \frac{1}{2}m\omega^2 x_0^2\sin^2\omega t =
+\frac{1}{2}m\omega^2 x_0^2 \end{equation}
+
+Types of damping: \begin{itemize} \item \textbf{Critical damping.} The damping
+    force is at an \textbf{exact amount} that allows the system to return to its
+  equilibrium position \textbf{in the minimum possible time after it is
+displaced}.  \item \textbf{Light damping.} The damping force is \textbf{smaller}
+  than that required for critical damping.  \item \textbf{Heavy damping.} The
+damping force is \textbf{larger} than that required for critical damping.
+\end{itemize}
+
+\paragraph{Resonance.} The state at which the \textbf{frequency of the external
+driving force} is \textbf{equal} to the \textbf{natural frequency of the
+oscillating system}. This results in the maximum transfer of energy from the
+driving system to the driven system, causing the system to respond with maximum
+amplitude.
+
+\section{Waves}
+
+\subsection{Wave Motion}
+
+\paragraph{Wave.} Mechanism by which energy is transferred from one point to
+another.
+
+\paragraph{Transverse Wave.} Direction of vibration of the wave particles is
+\textbf{perpendicular} to the direction of propagation of the wave.
+
+\paragraph{Longitudinal Wave.} Direction of vibration of the wave particles is
+\textbf{parallel} to the direction of propagation of the wave.
+
+\paragraph{Wavelength ($\lambda$).} Distance between two consecutive particles
+in the wave whose motions are in phase with one another.
+
+\paragraph{Frequency ($f$).} Number of complete oscillations undergone by a wave
+particle per unit time.
+
+\paragraph{Period ($T$).} Time taken for a wave particle to undergo one complete
+oscillation.
+
+\paragraph{Amplitude ($A$).} Maximum displacement of a wave particle from its
+equilibrium position.
+
+\paragraph{Velocity ($v$).} Velocity with which the wave profile advances.
+\begin{equation} v = \frac{\lambda}{T} = \frac{\lambda}{1/f} \implies v =
+f\lambda \end{equation}
+
+\paragraph{Progressive Wave.} Wave in which the wave profile moves in the
+direction of propagation of the wave.
+
+\paragraph{Phase Difference ($\Delta\phi$).} \begin{equation} \Delta\phi =
+\frac{x}{\lambda} 2\pi = \frac{t}{T} 2\pi \end{equation}
+
+\paragraph{Intensity ($I = \frac{\text{Power}}{\text{Area}}$).} \begin{equation}
+E = \frac{1}{2}m\omega^2 A^2 \implies I \propto A^2 \end{equation}
+
+\paragraph{Polarisation.} A polarised wave oscillates in a single direction
+perpendicular to the direction of propagation of the wave.
+
+\paragraph{Malus' Law.} For initial amplitude $A_0$ and transmitted amplitde
+$A_t$, considering initial intensity $I_0$ and transmitted intensity $I_t$,
+\begin{equation} A_t = A_0\cos\theta \implies I_t = I_0\cos^2\theta
+\end{equation} where $\theta$ is the angle that the vector of incident wave
+makes with the polarisation axis.
+
+\paragraph{EM Wave Spectrum.} \begin{tabular}{|l|l|} \hline \textbf{EM Wave} &
+  \textbf{Approximate Wavelength} \\ \hline Gamma-rays & $<$ 0.1 nm \\ X-Ray & 1
+  nm to 10 nm \\ Ultraviolet & 10 nm to 100 nm \\ Visible & 400 nm (blue) to 700
+  nm (red) \\ Infra-Red & 1 $\mu$m to 1 mm \\ Microwave & 1 cm to 10 cm \\ Radio
+& $>$ 10 m \\ \hline \end{tabular}
+
+\subsection{Superposition}
+
+\paragraph{Principle of Superposition.} The resultant wave displacement is given
+by the vectorial sum of the individual wave displacements at the point where the
+waves meet.
+
+\paragraph{Stationary Wave.} Two waves of the same propagation speed, wavelength
+and amplitude overlap while travelling in opposite directions.
+
+\paragraph{Fundamental Frequency.} Lowest resonant frequency of a vibrating
+object.
+
+\paragraph{Harmonic.} Integer multiple of the fundamental frequency of a
+vibrating object.
+
+\paragraph{Overtone.} Any resonant frequency above the fundamental frequency (an
+overtone may not be a harmonic).
+
+\paragraph{String.} $L = \frac{n}{2} \lambda_n$ for \textit{n}th harmonic (both
+ends are nodes).
+
+\paragraph{Closed Pipes.} $L = \frac{2n - 1}{4} \lambda_n$ for \textit{n}th
+harmonic (open end is antinode, closed end is node, $n$ must be odd).
+
+\paragraph{Open Pipes.} $L = \frac{n}{2} \lambda_n$ for \textit{n}th harmonic
+(both ends are antinodes).
+
+\paragraph{End Correction.} The distance of the anti-node away from the open
+end.
+
+\paragraph{Diffraction.} Spreading of waves when they encounter an aperture or
+obstacle whose linear dimension is comparable to the wavelength of the waves.
+Generally, the smaller the width of the aperture in relation to the wavelength,
+the greater is the spreading or diffraction of the waves.
+
+\paragraph{Interference.} Phenomenon of two or more waves of the same type
+meeting at a point in space to product a resultant wave disturbance given by the
+superposition of individual waves at that point.
+
+\paragraph{Conditions for steady-observable interference patterns:}
+\begin{itemize} \item Coherence (constant phrase difference) \item
+    \textit{(Transverse waves)} Unpolarized/Polarized in the same plane \item
+      Roughly same amplitude (if the amplitude of one wave is much greater than
+      the other, it is very difficult to observe interference) \end{itemize}
+
+Path and phase difference is denoted as $\Delta x$ and $\Delta \phi$
+respectively.
+
+\paragraph{Constructive Interference.} For two waves arriving at a point,
+$\Delta x = n\lambda$ where $\lambda$ is the wavelength of the two waves, or
+$\Delta\phi = 2n\pi$.
+
+\paragraph{Destructive Interference.} For two waves arriving at a point, $\Delta
+x = \left(n + \frac{1}{2}\right)\lambda$ where $\lambda$ is the wavelength of
+the two waves, or $\Delta\phi = (2n + 1)\pi$.
+
+\paragraph{Young's Double Slit Experiment.} \begin{equation} \text{Distance
+between two bright fringes, } \Delta y = \frac{\lambda D}{d} \end{equation}
+where $D$ is the distance between the screen and double slits and $d$ is the
+distance between the two slits.
+
+\paragraph{Rayleigh's Criterion.} The limiting angle of resolution,
+$\theta_{\text{min}}$, is determined by \begin{equation} \sin\theta_{\text{min}}
+= \frac{\lambda}{a} \end{equation} where $\lambda$ is the wavelength and $a$ is
+the width of the slit. For $\lambda << a$, $\sin\theta_{\text{min}} \approx
+\theta_{\text{min}}$ and $\theta_{\text{min}} \approx \frac{\lambda}{a}$.
+
+\paragraph{Single Slit Diffraction Pattern.} For the \textbf{first minimum},
+\begin{equation} \sin\theta = \frac{\lambda}{a} \end{equation} where $\theta$ is
+  the angle of deviation, $\lambda$ is the wavelength of light used, and $a$ is
+  the width of the slit.
+
+\paragraph{Multiple Slit Diffraction Pattern.} For the \textbf{$\mathbf{n}$th
+order maximum}, \begin{equation} d\sin\theta = n\lambda \end{equation} where $d$
+  is the spacing of slits in the diffraction grating, $\theta$ is the angle of
+  deviation, and $\lambda$ is the wavelength of light used.
+
+\section{Electricity and Magnetism}
+
+\subsection{Electric Fields}
+
+Take $\epsilon$ to be the permittivity of the medium and $r$ to be the distance
+between two point charges.
+
+\paragraph{Coulomb's Law.} The \textbf{force} acting on a point charge $Q_1$ on
+another point charge $Q_2$ is \begin{equation} F = \frac{Q_1Q_2}{4\pi\epsilon
+r^2} \end{equation}.
+
+\paragraph{Electric Field Strength ($E$).} \textbf{Force per unit positive
+charge} placed at that point due to a point charge $Q$. \begin{equation} E =
+\frac{F}{q} = \frac{Q}{4\pi\epsilon r^2} \end{equation}
+
+\paragraph{Electric Potential Energy ($U$).} The \textbf{potential energy} $U$
+between two point charges $Q_1$ and $Q_2$ is \begin{equation} F =
+-\frac{\mathrm{d}U}{\mathrm{d}r} \implies U = \frac{Q_1Q_2}{4\pi\epsilon r}
+\end{equation}
+
+\paragraph{Electric Potential ($V$).} \textbf{Work done per unit charge} by an
+external agent in bringing a small test charge from infinity to a point without
+change in kinetic energy. \begin{equation} E = -\frac{\mathrm{d}V}{\mathrm{d}r}
+  \implies V = \frac{Q}{4\pi\epsilon r} \end{equation}
+
+For two parallel metal plates with potential difference $V$, there is an uniform
+electric field $E = \frac{V}{d}$ where $d$ is the distance between the two
+plates.
+
+\subsection{Current of Electricity}
+
+\paragraph{Current ($I$).} Rate of flow of electric charge through a given
+cross-section of a conductor ie. $I = \frac{\mathrm{d}{Q}}{\mathrm{d}t}$.
+\begin{equation} I = nAve \end{equation} where $n$ is the number density of
+  electrons, $A$ is the cross-sectional area of the conductor, $v$ is the
+  average drift velocity of the electrons and $e$ is the elementary charge.
+
+\paragraph{Charge ($Q$).} The charge which flows past a given cross section is
+the product of the steady current that flows past the section and the time
+during which the current flows ie. $Q = It$.
+
+\paragraph{Coulomb.} Amount of electrical charge that passes through a given
+cross section of a circuit when a steady current of one ampere flows in one
+second.
+
+\paragraph{Potential Difference ($V$).} Amount of electrical energy converted to
+other forms of energy when unit charge passes from one point to the other.
+\begin{equation} V = \frac{W}{Q} = \frac{P}{I} \end{equation}
+
+\paragraph{Volt.} Potential difference between two points in a circuit if one
+joule of electrical energy is converted to other forms of energy when one
+coulomb of charge passes from one point to the other.
+
+\paragraph{Resistance ($R$).} Ratio of potential difference across the conductor
+to the current flowing through it ie. $R = \frac{V}{I}$. The resistance across a
+conductor can be calculated by the following formula: \begin{equation} R =
+  \frac{\rho L}{A} \end{equation} where $\rho$ is resistivity of the material,
+  $L$ is the length of the conductor, and $A$ is the cross-sectional area of the
+  conductor.
+
+\paragraph{Ohm.} Resistance of a conductor if a current of one ampere flows in
+it when a potential difference of one volt is applied across it.
+
+\paragraph{Internal Resistance.} Resistance of a cell due to chemicals in the
+cell.
+
+\subsection{D.C. Circuits}
+
+\paragraph{Kirchhoff's First Law (Current Law).} The algebraic sum of the
+currents at a junction of a circuit is zero ie. $\sum I = 0$. (This law is a
+consequence of the law of conservation of charge.)
+
+\paragraph{Kirchhoff's Second Law (Voltage Law).} The algebraic sum of all
+electric potential changes around any closed loop is zero ie. $\sum \Delta V =
+0$. (This law is a consequence of the law of conservation of energy.)
+
+\paragraph{Effective Resistance of Resistors in Series.} \begin{equation}
+R_{\text{eff}} = R_1 + R_2 + \ldots + R_n \end{equation}
+
+\paragraph{Effective Resistance of Resistors in Parallel.} \begin{equation}
+\frac{1}{R_{\text{eff}}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots +
+\frac{1}{R_n} \end{equation}
+
+\paragraph{Electromotive Force.} Amount of energy converted from non-electrical
+to electrical form per unit charge that moves from one terminal of the cell to
+the other outside of the cell.
+
+\paragraph{Potential-Divider Principle.} Consider a circuit with two resistors
+$R_1$ and $R_2$ connected in series, with a voltage $V$ applied across them. The
+voltage across $R_1$ is $V_1 = \frac{R_1}{R_1 + R_2}V$ and similarly, the
+voltage across $R_2$ is $V_2 = \frac{R_2}{R_1 + R_2}V$. (The rule applies to
+continuous wire resistors too.)
+
+\paragraph{Thermistor.} Resistor whose electrical resistance varies with
+temperature. (Most commonly, the resistance of a thermistor will fall as its
+temperature rises.)
+
+\paragraph{Light-Dependent Resistor (LDR).} Resistor whose electrical resistance
+decreases as the intensity (brightness) of the light falling onti it increases.
+(Also known as a photoresistor or photocell.)
+
+\paragraph{Ground.} A conductor connected to the earth. The absolute potential
+of the ground, and the earth, is taken to be zero.
+
+\subsection{Electromagnetism}
+
+\paragraph{Magnetic Flux Density ($B$).} Force acting per unit length of a
+conductor which carries unit current and is at right angles to the magnetic
+field. \begin{equation} F = BIL\sin\theta \implies B = \frac{F}{IL\sin\theta}
+\end{equation} where $F$ is the force acting on the conductor, $I$ is the
+current passing through the conductor and $\theta$ is the angle that the
+conductor makes with the magnetic field.
+
+\paragraph{Tesla.} Unit of magnetic flux density equivalent to a force of 1 N
+experience by a straight conductor of length 1 m and carrying a current of 1 A
+when it is placed perpendicular to a magnetic field.
+
+\paragraph{Torque on a Current-Carrying Rectangular Loop.} For a loop with $N$
+turns in a magnetic field $B$, the total torque on its vertical arms is
+\begin{equation} \tau = BIAN \end{equation} where $I$ is the current passing
+  through the loop and $A$ is the area of the rectangular loop.
+
+\paragraph{Force on a Charged Particle.} The force experienced by the charged
+particle in a magnetic field $B$ is given by \begin{equation} F = Bqv\sin\theta
+\end{equation} where $q$ is the charge of the particle, $v$ is the velocity of
+the particle, and $\theta$ is the angle between the magnetic field and the
+velocity vector.
+
+\paragraph{Magnetic Field due to a Long, Straight Wire.} For an infinitely long,
+straight wire with current $I$, the magnetic field generated is \begin{equation}
+B = \frac{\mu_0I}{2\pi r} \propto \frac{I}{r} \end{equation} where $r$ is the
+distance away from the wire.
+
+\paragraph{Magnetic Field due to a Solenoid.} For a solenoid with current $I$,
+the magnetic field generated at the centre is \begin{equation} B = \mu_0nI
+\propto nI \end{equation} where $n = \frac{N}{L}$, $N$ representing the number
+of turns and $L$ representing the length of the solenoid. The magnetic field of
+the solenoid at its ends is halved ie. $B = \frac{1}{2}\mu_0nI$.
+
+\paragraph{Magnetic Field due to a Circular Coil.} For a circular coil of $N$
+turns and radius $r$ with current $I$ passing through, the magnetic field
+generated at the centre is \begin{equation} B = \frac{\mu_0NI}{2r} \propto
+\frac{NI}{r} \end{equation}
+
+\subsection{Electromagnetic Induction}
+
+\paragraph{Magnetic Flux ($\phi$).} Product of the component of the magnetic
+field normal to the plane of the surface and the area of the surface ie. $\phi =
+BA\cos\theta$ where $\theta$ is the angle between the magnetic field and the
+normal to the area of the surface.
+
+\paragraph{Total Flux Linkage ($\Phi$).} The total flux linkage is given by
+$\Phi = N\phi = NBA\cos\theta$.
+
+\paragraph{Faraday's Law.} When the magnetic flux linkage with a circuit is
+changed, an induced emf is set-up whose magnitude is proportional to the rate of
+change of flux linkage ie. $\epsilon =
+\left|\frac{\mathrm{d}\phi}{\mathrm{d}t}\right|$.
+
+\paragraph{Lenz's Law.} The direction of induced electromotive force is so
+directed as to oppose the change in flux causing it.
+
+\paragraph{Electromagnetic Force Induced in a Long, Straight Wire.} $\epsilon =
+BLv$ where $L$ is the length of the wire and $v$ is the velocity of the wire.
+
+\subsection{Alternating Currents}
+
+\paragraph{Root-mean-square Current ($I_{rms}$).} \begin{equation} I_{rms} =
+\sqrt{\langle I^2 \rangle} = \sqrt{\frac{1}{T} \int^{t_2}_{t_1} \! I^2 \,
+\mathrm{d}t} \end{equation}
+
+\paragraph{Average Power ($\langle P \rangle$).} \begin{equation} \langle P
+\rangle = \langle I^2 \rangle R = I^2_{rms}R \end{equation}
+
+\paragraph{Sinusoidal A.C ($I = I_0\sin{\omega t}$).} \begin{equation} I_{rms} =
+\frac{I_0}{\sqrt{2}}, \langle P \rangle = \frac{P_0}{2} \end{equation}
+
+\paragraph{Simple Iron-core Transformer.} \begin{equation} \frac{N_s}{N_p} =
+\frac{V_s}{V_p} = \frac{I_p}{I_s} \end{equation}
+
+\paragraph{Half-Wave Rectification.} The use of a single diode in a circuit with
+an A.C. source converts the A.C. into a D.C. (However, as current can only pass
+through the diode in a single direction, half of the power is lost.)
+
+\section{Modern Physics}
+
+\subsection{Quantum Physics}
+
+\paragraph{Photon Energy ($E$).} \begin{equation} E = hf \end{equation} where
+  $h$ is Planck's constant and $f$ is the frequency of the electromagnetic
+  radiation.
+
+\paragraph{Work Function ($\phi$).} Minimum energy needed to remove an electron
+from the surface of a solid.
+
+\paragraph{Photoelectric Equation.} When photons of frequency $f$ are shone onto
+a metal surface, \begin{equation} hf = \frac{1}{2}m_ev_{\text{max}}^2 + \phi
+\end{equation} where $v_{\text{max}}$ is the maximum velocity of photoelectrons
+emitted. Consequently, $\phi = hf_0$ where $f_0$ is the threshold frequency
+required for emission of photoelectrons.
+
+\paragraph{Stopping Potential ($V_s$).} The minimum electric potential required
+to stop emitted photoelectrons with the highest kinetic energyt is
+\begin{equation} eV_s = \frac{1}{2}m_ev_{\text{max}}^2 \implies V_s = \frac{hf -
+\phi}{e} = \frac{h(f - f_0)}{e} \end{equation}
+
+\paragraph{de Broglie Wavelength.} The wavelength of a particle is given by
+\begin{equation} \lambda = \frac{h}{p} = \frac{h}{mv} \end{equation} where $p$
+  is the momentum of the object.
+
+\paragraph{Ground State.} Condition in which every electron is in the lowest
+energy state available.
+
+\paragraph{Excitation Energy.} Energy required to raise the atom from its ground
+state to an excited state.
+
+\paragraph{Ionisation Energy.} Energy required to raise an electron from level
+$n = 1$ to $n = \infty$.
+
+\paragraph{Lyman, Balmer and Paschen Series.} The Lyman series refers to the
+downward transitions of electrons from any energy level in a hydrogen atom to
+the ground level $n = 1$. Similarly, the Balmer and Paschen series refer to the
+downward transitions of electrons to $n = 2$ and $n = 3$ respectively.
+
+\paragraph{Line Spectra.} Refer to notes for details on emission line spectra
+and absorption line spectra.
+
+\paragraph{X-Ray Spectrum.} Refer to notes for details on the line spectrum and
+continuous spectrum.
+
+\paragraph{Bremsstrahlung Radiation (Braking Radiation).} Electromagnetic
+radiation produced when electrons in the X-ray tube are decelerated due to the
+electric and magnetic field of an atomic nucleus.
+
+\paragraph{Heisenberg's Uncertainty Principle.} The uncertainties in the
+measurements of position and momentum, $\Delta x$ and $\Delta p$ respectively,
+are determined by \begin{equation} \Delta x \Delta p \geq \frac{\hslash}{2} =
+  \frac{h}{4\pi} \end{equation} where $\hslash$ is the reduced Planck's
+  constant.
+
+\subsection{Nuclear Physics}
+
+\paragraph{Rutherford's $\alpha$-particle Scattering Experiment.} Shows the
+existence and \textit{extremely} small size of the atomic nucleus. (Refer to notes for more
+details.)
+
+\paragraph{Proton/Atomic Number ($Z$).} Number of protons within an atomic
+nucleus.
+
+\paragraph{Nucleon/Mass Number ($A$).} Total number of nucleons (protons and
+neutrons) in an atomic nucleus.
+
+\paragraph{Isotopes.} Atoms of the same element having the same atomic number
+$Z$ but different mass number $A$.
+
+\paragraph{Relative Atomic Mass ($A_r$).} Mass of an atom by comparing its mass
+to that of the neutral carbon-12 isotope.
+
+\paragraph{Unified Atomic Mass Constant ($u$).} The unified mass unit is defined
+such that the mass of an atom of the carbon-12 isotope is exactly $12u$.
+
+\paragraph{Mass-Energy Equivalence.} Mass $m$ and energy $E$ are equivalent, by
+the formula $E = mc^2$ where $c$ is the speed of light.
+
+\paragraph{Mass Defect.} Discrepancy in mass between the mass of nucleus and the
+mass of its nucleons.
+
+\paragraph{Binding Energy.} Mass which disappears corresponding to an amount of
+energy released to form the stable nucleus from its component nucleons. (alt.
+Total amount of energy needed to split a stable nucleus into its free
+constituent nucleons.)
+
+\paragraph{Binding Energy per Nucleon.} Measure of average amount of energy
+needed to extract a nucleon from the nucleous.
+
+\paragraph{Conservation Laws in Nuclear Reactions.} There are three conservation
+laws: \begin{enumerate} \item \textbf{Conservation of mass numbers.} The sum of
+      the mass numbers of the nuclides before the reaction is the same as that
+      of the nuclides after the reaction.  \item \textbf{Conservation of atomic
+        numbers.} Charge is conserved in nuclear reactions. The sum of the
+        atomic numbers of the nuclides before the reaction is the same as that
+        of the nuclides after the reaction.  \item \textbf{Conservation of
+mass-energy.} The total mass-energy before and after the reaction must be the
+same.  \end{enumerate}
+
+\paragraph{Nuclear Fission.} When bombarded with a neutron, a heavy nucleus
+undergoes nuclear fission causing it to disintegrate into two lighter nuclei,
+which subsequently emits multiple neutrons.
+
+\paragraph{Nuclear Fusion.} The combination of two light nuclei to form a
+heavier nucleus.
+
+\paragraph{Radioactivity.} Spontaneous and random disintegration of a heavy
+unstable nucleus into a more stable nucleus through the emission of radiation
+such as $\alpha$-particles, $\beta$-particles and $\gamma$-rays.
+
+Spontaneity refers to radioactive decays occuring of their own accord and being
+unaffected by physical and chemical factors.
+
+Randomness refers to the impossibility of predicting exactly which and when a
+particular nucleus will disintegrate. Particles are not emitted at regular
+intervals of time, and it is impossible to know the direction of emission of
+particles.
+
+\paragraph{Alpha Decay.} Alpha particles (namely, the helium nucleus ie. 2
+protons and 2 neutrons bound together) are emitted from nuclei that are too
+large to be stable, with speed roughly $0.1c$ and forming roughly $10^4$ ion
+pairs per mm in air.
+
+\paragraph{Beta Decay.} Beta particles (electrons or positrons) are emitted from
+nuclei that have a skewed neutron-to-proton ratio, with a speed of roughly
+$0.9c$ and forming roughly $10^2$ ion pairs per mm in air.
+
+If a nucleus has too many neutrons, a neutron is converted into a proton, an
+electron, and an antineutrino.
+
+If a nucleus has too many protons, a proton is converted into a neutron, a
+positron, and a neutrino.
+
+\paragraph{Gamma Emission.} Nucleus resulting from alpha or beta decay are left
+in an excited energy state and may give up excess energy by emitting
+electromagnetic radiation, in the form of gamma rays. They form roughly one ion
+pair per mm in air.
+
+\paragraph{Activity ($A$).} The activity of a radioactive material is the number
+of disintegrations of its atoms per unit time ie. $A =
+-\frac{\mathrm{d}N}{\mathrm{d}t}$. The activity of a material at a particular time
+can be found with $t_{1/2}$. \begin{equation} A = A_{0} \left(
+  \frac{1}{2} \right) ^{\frac{t}{t_{1/2}}}
+\end{equation}
+
+\paragraph{Decay Constant ($\lambda$).} Probability of a particular atom
+decaying per unit time. Since $-\frac{\mathrm{d}N}{\mathrm{d}t} \propto N$,
+activity can be expressed as $A = \lambda N$. Likewise, $N = N_0e^{-\lambda t}$
+and similarly for $A$, $m$ (mass) and $C$ (count rate).
+
+\paragraph{Half Life ($t_{1/2}$).} Time taken for half the number of nuclei of a
+radioactive element to decay. \begin{equation} t_{1/2} = \frac{\ln 2}{\lambda}
+\end{equation}
+
+\end{document}
