@@ -1,7 +1,7 @@
 %% File              : notes.tex
 %% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
 %% Date              : 2020-04-12T16:57:32+0800
-%% Last Modified Date: 2020-06-25T21:40:38+0800
+%% Last Modified Date: 2020-07-04T21:53:37+0800
 %% Last Modified By  : Wayne Yeo [fishnsotong@gosigs] <wwzyeo@gmail.com>
 
 \documentclass{article}
@@ -26,6 +26,8 @@
 \newtheorem{definition}{Definition}
 \numberwithin{definition}{section}
 \newtheorem*{definition*}{Definition}
+\newenvironment{justification} {\begin{proof}[Justification]} {\end{proof}}
+
 
 \titleformat
 {\part} % command
@@ -131,11 +133,50 @@ Notice that Equation 4 reduces to $pV = nRT$ when $\overline{V}$ is large.
 
 \section{Enthalpy}
 
-\begin{equation}
-  H := U + pV
-\end{equation}
+\begin{definition}
+  The sum of a system's internal energy and the product of its pressure and
+  volume. Though this definition may seem arbitrary, the heat absorbed or
+  released by closed systems at constant pressure equals the change in enthalpy.
+  \begin{equation}
+   H := U + pV
+  \end{equation}
+\end{definition}
 
 
+Though this definition may seem arbitrary, a result of consequence is the heat
+absorved or released by closed systems at constant pressure equals the change in
+enthalpy of the system.
+
+\begin{justification}
+  By definition, $H = U + pV$. As the system undergoes a small change of $\mathrm{d}H$,
+  \begin{equation*}
+    \begin{split}
+      H + \mathrm{d}H & = U + \mathrm{d}U + (p + \mathrm{d}V)(V + \mathrm{d}V) \\
+      & = U + \mathrm{d}U + pV + p\mathrm{d}V + V\mathrm{d}p +
+      \mathrm{d}p\mathrm{d}V
+    \end{split}
+  \end{equation*}
+  As the product of two infinitesimal equations can be neglected,
+
+  \begin{equation*}
+    \begin{split}
+      H + \mathrm{d}H & = H + \mathrm{d}U + V\mathrm{d}p + p\mathrm{d}V \\
+      \mathrm{d}H & = \mathrm{d}U + V\mathrm{d}p + p\mathrm{d}V
+    \end{split}
+  \end{equation*}
+
+  By the First Law of Thermodynamics $\mathrm{d}U = \mathrm{d}q + \mathrm{d}w$,
+
+  \begin{equation*}
+    \mathrm{d}w = -p\mathrm{d}V
+  \end{equation*}
+
+  As a system under mechanical equilibrium does only expansion work.
+
+
+\end{justification}
+
+\pagebreak
 \part{Kinetics}
 
 \section{Introduction to reaction kinetics}

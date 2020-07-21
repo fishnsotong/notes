@@ -6,3 +6,4 @@
 *.log
 *.out
 examples
+*.ipynb_checkpoints
