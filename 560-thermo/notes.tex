@@ -1,8 +1,8 @@
 %% File              : notes.tex
 %% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
 %% Date              : 2020-04-12T16:57:32+0800
-%% Last Modified Date: 2020-07-04T21:53:37+0800
-%% Last Modified By  : Wayne Yeo [fishnsotong@gosigs] <wwzyeo@gmail.com>
+%% Last Modified Date: 2020-08-13T07:08:14+0800
+%% Last Modified By  : Wayne Yeo [fishnsotong@superheated] <wwzyeo@gmail.com>
 
 \documentclass{article}
 
@@ -10,6 +10,11 @@
 \usepackage[shortlabels]{enumitem}
 \usepackage{physics}
 \usepackage{titlesec}
+
+\usepackage{epigraph}
+\setlength\epigraphwidth{10cm}
+
+\hyphenpenalty=1000
 
 \newtheorem{theorem}{Theorem}
 \numberwithin{theorem}{section}
@@ -57,13 +62,39 @@
 \begin{abstract}
   This course deals primarily with equilibrium properties of macroscopic
   systems, basic thermodynamics, chemical equilibirum of reactions in gas and
-  solution phase, and rates of chemical reactions.
+  solution phase, and rates of chemical reactions. Additional topics include
+  electrochemistry, catalysis and enzyme kinetics.
 \end{abstract}
 
 \tableofcontents
 \newpage
 
 \part{Thermodynamics}
+
+\epigraph{[\textbf{Thermodynamics} is] the only physical theory of universal
+content concerning which I am convinced that, within the framework of the
+applicability of its basic concepts, it will never be overthrown.}{Einstein}
+
+The primary objective of chemical thermodynamics is the establishment of a
+criterion to determine the feasibility or spontaneity of a given
+transformation. Some examples of processes that we consider are chemical
+reactions, phase changes and the formation of solutions. 
+
+The thermodynamic description of these chemical systems employ the \textbf{laws
+of thermodynamics}, that form an axiomatic basis. The first law specifies that
+energy can be exchanged between physical systems as heat and work.
+The second law defines the existence of a quantity called entropy, that
+describes the thermodynamic direction in which the system can evolve.
+
+In thermodynamics, we make certain distinctions about what the system is. The
+\textbf{thermodynamic system} is a precisely defined region of the universe
+under study. Everything in the universe except the system is called the
+surroundings.
+
+In conclusion, in thermodynamics we consider whether these processes \textit{can
+happen}, and \textit{to what extent} they happen. It is worthy of note that
+thermodynamics remains silent regarding \textit{how fast} they occur, which will
+be dealt with in kinetics.
 
 \setcounter{section}{0}
 \section{States, equations of state, 0th law}
@@ -104,11 +135,11 @@ reach 0 K}.
 \subsubsection{Types of properties}
 \begin{itemize}
   \item{Intensive properties (temperature, molar volume, molar mass, density)}
-  \item{Extensive propertiesi (mass, volume, pressure)}
+  \item{Extensive properties (mass, volume, pressure)}
 \end{itemize}
 
-You can usually get an intensive property from an extensive property by dividing
-it by the number of moles.
+To get an intensive property from an extensive property, divide the property by
+its molar amount.
 
 \subsection{Properties of gases}
 
@@ -129,19 +160,73 @@ Notice that Equation 4 reduces to $pV = nRT$ when $\overline{V}$ is large.
 
 \section{Work, heat, first law}
 
+\paragraph{Sign convention. }Contra to engineering, chemical science adopts
+a sign convention that is \textit{additive} in nature. $q$ represents the heat
+absorbed \textit{by} the system, and $w$ represents work done \textit{on} the
+system.
+
 \section{Internal energy, expansion work}
+
+\subsection{Expansion work} 
+
+\paragraph{Expansion work of a gas at constant external pressure.} Because
+external pressure is constant, this equation is for irreversible processes.
+
+\begin{equation}
+  \delta w' = p_{ext} \mathrm{d}V
+\end{equation}
+
+\begin{justification}
+  The force which the system moves against is due to the \textit{external
+  pressure}.
+
+  For a piston with area $A$, the force on the piston is $p_{ext}A$. If the
+  piston moves out by a small distance $\mathrm{d}x$.
+
+  \begin{equation*}
+  \begin{split}
+    \delta w' = F\mathrm{d}x \\
+    & = p_{ext} \mathrm{d}V
+  \end{split}
+\end{equation*}
+
+\end{justification}
+
+When the external pressure is zero, the system does no work as it expands,
+because it has nothing to push against. This is a \textbf{free expansion}.
+
+\subsubsection{Reversible changes}
+Expansions where $p = p_{ext}$. That is, adjusting hypothetical weights on the
+piston as the gas is expanding to ensure the above condition. This is to ensure
+that $p_{ext}$ is infinitesimally smaller than $p$ at each step of the process.
+\textit{Maximum work} is done when an expansion is reversible.
+
+\subsubsection{Isothermal, reversible expansions}
+
+\paragraph{Work done in an isothermal, reversible expansion. }
+
+\begin{equation}
+  w' = nRT\ln{\frac{V_f}{V_i}}
+\end{equation}
+
+\paragraph{Entropy change for isothermal expansions. }Because $S$ is a state
+function and is independent of the path taken, the expression below is valid
+regardless of the reversibility of the expansion.
+
+\begin{equation}
+  \Delta S = nR \ln{\frac{V_f}{V_i}}
+\end{equation}
 
 \section{Enthalpy}
 
 \begin{definition}
   The sum of a system's internal energy and the product of its pressure and
-  volume. Though this definition may seem arbitrary, the heat absorbed or
-  released by closed systems at constant pressure equals the change in enthalpy.
+  volume. The heat absorbed or released by closed systems at constant pressure
+  equals the change in enthalpy.
   \begin{equation}
    H := U + pV
   \end{equation}
 \end{definition}
-
 
 Though this definition may seem arbitrary, a result of consequence is the heat
 absorved or released by closed systems at constant pressure equals the change in
@@ -173,10 +258,116 @@ enthalpy of the system.
 
   As a system under mechanical equilibrium does only expansion work.
 
-
 \end{justification}
 
+\section{Adiabatic changes}
+
+\section{Thermochemistry}
+
+\section{Calorimetry}
+
+\section{The Second Law of Thermodynamics}
+
 \pagebreak
+
+\section{Entropy and the Clausius inequality}
+
+A key aim of physical chemistry is to seek a physical principle or law which
+determines which processes will be spontaneous, and which will not. A tempting
+idea is that reactions are spontaneous because the products are \textit{more
+stable} than the reactants, which implies that they are lower in energy.
+However, we can think of examples where processes are spontaneous but are
+\textit{not} exothermic. 
+
+Thus, energy minimization is \textit{not} the criterion for spontaneous
+processes. This leads to a necessary discussion on the \textbf{Second Law of
+Thermodynamics}.
+
+\subsection{Microsopic view of entropy}
+
+\paragraph{Boltzmann distribution. } The most probable distribution of a
+particular system. $W$ represents the number of possible configurations of a
+system.
+
+\begin{equation}
+  S = k_{B} \ln{W}
+\end{equation}
+
+We can consider a few factors that increases $S$ by increasing $W$. In fact, most
+macroscopic principles regarding entropy can be rationalized as such.
+
+\begin{itemize}
+  \item \textit{Supplying energy as heat:} increases $W$ and hence increases the
+    entropy.
+  \item \textit{Increasing volume:} increasing the number of energy levels
+    available, which increases $W$, which
+\end{itemize}
+
+The chief reason behind abandoning these definitions and their consequences for
+empirical laws is practical in nature, and helps with understanding and
+manipulating their effects on bulk matter. We will return to this statistical
+understanding on entropy in \textit{statistical mechanics} at a later time.
+
+\begin{definition}[Second Law of Thermodynamics]
+  In a spontaneous process, the entropy of the Universe increases
+\end{definition}
+
+\section{Entropy and irreversibility}
+
+We've now discussed both entropy and reversible processes separately, now we
+will consider how the disorder of a system affects whether a process is
+spontaneous, reversible or entirely impossible.
+
+\section{Fundamental equation, absolute $S$, third law}
+
+\subsection{The Master Equation}
+
+\section{Criteria for spontaneous change}
+
+\section{Gibbs free energy}
+
+\section{Helmholtz free energy}
+
+\section{Multicomponent systems, chemical potential}
+
+\section{Chemical equilibrium}
+
+\section{Temperature, pressure and $K_p$}
+
+\section{Equlibrium: application to drug design}
+
+Our analysis of equilibrium typically involves breaking and forming covalent
+bonds. Thus, they apply equally well to bio-organic reactions, such as those
+involved in ligand-receptor binding.
+
+\section{Phase equilibria}
+
+\subsection{Properties of pure substances}
+
+\subsection{Clausius-Clapyreon equation}
+
+\subsection{Properties of mixtures}
+
+\subsubsection{Ideal solutions}
+
+\subsubsection{Non-ideal solutions}
+
+\subsection{Colligative properties}
+
+\section{Introduction to statistical mechanics}
+
+\section{The partition function}
+
+\subsection{$q$, large $N$ limit}
+
+\subsection{$Q$, many particles}
+
+\section{Statistical mechanics and discrete energy levels}
+
+\section{Model systems}
+
+\section{Applications: chemical and phase equilibria}
+
 \part{Kinetics}
 
 \section{Introduction to reaction kinetics}
@@ -193,5 +384,46 @@ enthalpy of the system.
 \paragraph{Half-life.} $t_{1/2}$ is the time at which $[\mathrm{A}] =
 0.5[\mathrm{A}]_0$.
 
+\section{Complex reactions and mechanisms}
+
+\section{Steady-state and equilibrium approximations}
+
+\section{Chain reactions and explosions}
+
+\section{Temperature, $E_a$, catalysis}
+
+\section{Enzyme catalysis}
+
+\section{Autocatalysis and oscillators}
+
+\part{Electrochemistry}
+
+\section{Introduction to electrochemistry}
+
+\section{The electrochemical cell}
+
+\section{Potentials, interfaces, electrodes and mass transport}
+
+\section{Heterogeneous electron transfer}
+
+\subsection{Tafel equation}
+
+\section{Dynamic electrochemical techniques}
+
+\section{Electrochemical energy storage}
+
+\subsection{Batteries}
+
+\subsection{Fuel cells}
+
+\subsection{Supercapacitors and electrode storage}
+
+\section{Electrochemical and spectroscopic instrumentation}
+
+\subsection{Cyclic voltammetry}
+
+\subsection{Electrochemical impedance spectroscopy}
+
+\subsection{Transient absorption spectroscopy}
 
 \end{document}
