@@ -1,7 +1,7 @@
 %% File              : notes.tex
 %% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
 %% Date              : 2020-04-12T16:57:32+0800
-%% Last Modified Date: 2020-08-13T07:08:14+0800
+%% Last Modified Date: 2020-08-13T13:35:17+0800
 %% Last Modified By  : Wayne Yeo [fishnsotong@superheated] <wwzyeo@gmail.com>
 
 \documentclass{article}
@@ -10,6 +10,9 @@
 \usepackage[shortlabels]{enumitem}
 \usepackage{physics}
 \usepackage{titlesec}
+\usepackage{achemso}
+\usepackage{chemmacros}
+  \chemsetup{modules={all}}
 
 \usepackage{epigraph}
 \setlength\epigraphwidth{10cm}
@@ -67,6 +70,23 @@
 \end{abstract}
 
 \tableofcontents
+
+\newpage
+
+\section*{\centering{Useful Relations}}
+\bigskip
+
+\begin{equation*}
+  \Delta_r G^{\standardstate} = -RT\ln{K}
+\end{equation*}
+
+\begin{equation*}
+\Delta_r G^{\standardstate} = \Delta_r H^{\standardstate} - T \Delta_r S^{\standardstate}
+\end{equation*}
+
+\begin{equation*}
+  E = E^{\standardstate'} + \frac{RT}{n'F} \ln{\frac{C_\mathrm{P}}{C_\mathrm{Q}}}
+\end{equation*}
 \newpage
 
 \part{Thermodynamics}
@@ -92,9 +112,9 @@ under study. Everything in the universe except the system is called the
 surroundings.
 
 In conclusion, in thermodynamics we consider whether these processes \textit{can
-happen}, and \textit{to what extent} they happen. It is worthy of note that
+happen}, and \textit{to what extent} they happen. It is important to note that
 thermodynamics remains silent regarding \textit{how fast} they occur, which will
-be dealt with in kinetics.
+be dealt with in kinetics at a later stage.
 
 \setcounter{section}{0}
 \section{States, equations of state, 0th law}
@@ -178,14 +198,13 @@ external pressure is constant, this equation is for irreversible processes.
 
 \begin{justification}
   The force which the system moves against is due to the \textit{external
-  pressure}.
-
-  For a piston with area $A$, the force on the piston is $p_{ext}A$. If the
+  pressure}. For a piston with area $A$, the force on the piston is $p_{ext}A$. If the
   piston moves out by a small distance $\mathrm{d}x$.
 
   \begin{equation*}
   \begin{split}
-    \delta w' = F\mathrm{d}x \\
+    \delta w' & = F\mathrm{d}x \\
+    & =  p_{ext} A \mathrm{d}x \\
     & = p_{ext} \mathrm{d}V
   \end{split}
 \end{equation*}
@@ -209,18 +228,25 @@ that $p_{ext}$ is infinitesimally smaller than $p$ at each step of the process.
   w' = nRT\ln{\frac{V_f}{V_i}}
 \end{equation}
 
-\paragraph{Entropy change for isothermal expansions. }Because $S$ is a state
-function and is independent of the path taken, the expression below is valid
-regardless of the reversibility of the expansion.
+\paragraph{Entropy change for isothermal expansions. }
 
 \begin{equation}
   \Delta S = nR \ln{\frac{V_f}{V_i}}
 \end{equation}
 
+\begin{justification}
+  For an isothermal system, $\Delta U = 0$. According to the \textbf{First Law of Thermodynamics}, $-w = q$. Thus, we can see that
+  \begin{equation*}
+      q = nRT\ln{\frac{V_f}{V_i}}.
+  \end{equation*}
+Which can be rearranged to give $\Delta S$. Because $S$ is a state function and is independent of the path taken, the expression below is valid
+regardless of the reversibility of the expansion.
+\end{justification}
+
 \section{Enthalpy}
 
 \begin{definition}
-  The sum of a system's internal energy and the product of its pressure and
+  Enthalpy is the sum of a system's internal energy and the product of its pressure and
   volume. The heat absorbed or released by closed systems at constant pressure
   equals the change in enthalpy.
   \begin{equation}
@@ -236,7 +262,7 @@ enthalpy of the system.
   By definition, $H = U + pV$. As the system undergoes a small change of $\mathrm{d}H$,
   \begin{equation*}
     \begin{split}
-      H + \mathrm{d}H & = U + \mathrm{d}U + (p + \mathrm{d}V)(V + \mathrm{d}V) \\
+      H + \mathrm{d}H & = U + \mathrm{d}U + (p + \mathrm{d}V)(V + \mathrm{d}p) \\
       & = U + \mathrm{d}U + pV + p\mathrm{d}V + V\mathrm{d}p +
       \mathrm{d}p\mathrm{d}V
     \end{split}
@@ -249,16 +275,28 @@ enthalpy of the system.
       \mathrm{d}H & = \mathrm{d}U + V\mathrm{d}p + p\mathrm{d}V
     \end{split}
   \end{equation*}
+  
+  Which is known as the \textit{complete differential} of the definition of enthalpy.
 
-  By the First Law of Thermodynamics $\mathrm{d}U = \mathrm{d}q + \mathrm{d}w$,
-
+  By the \textbf{First Law of Thermodynamics} $\mathrm{d}U = \mathrm{d}q + \mathrm{d}w$, the term $\mathrm{d}w = -p\mathrm{d}V$ can be substituted into the complete differential as a system under mechanical equilibrium does only expansion work.
+  
   \begin{equation*}
-    \mathrm{d}w = -p\mathrm{d}V
+    \begin{split}
+      \mathrm{d}H & = \mathrm{d}U + V\mathrm{d}p + p\mathrm{d}V \\
+      & = \mathrm{d}q - p\mathrm{d}V + V\mathrm{d}p + p\mathrm{d}V \\
+      & = \mathrm{d}q + V\mathrm{d}p
+    \end{split}
   \end{equation*}
 
-  As a system under mechanical equilibrium does only expansion work.
+Finally, the condition of \textit{constant pressure} is imposed on the system, which is the case for most chemical changes even in a practical sense. This means that $V\mathrm{d}p = 0$. Which gives,
+
+\begin{equation}
+  \mathrm{d}H = \mathrm{d}q_{\mathrm{const. pressure}}
+\end{equation}
 
 \end{justification}
+
+From the above justification, we can see why $H$ is a good measure of the energy transferred as heat in the various bond-forming and bond-breaking transformations that we encounter in chemistry, which we often invoke in thermochemical calculations.
 
 \section{Adiabatic changes}
 
@@ -408,6 +446,8 @@ involved in ligand-receptor binding.
 
 \subsection{Tafel equation}
 
+\subsection{Butler-Volmer equation}
+
 \section{Dynamic electrochemical techniques}
 
 \section{Electrochemical energy storage}
@@ -418,12 +458,16 @@ involved in ligand-receptor binding.
 
 \subsection{Supercapacitors and electrode storage}
 
-\section{Electrochemical and spectroscopic instrumentation}
+\section{Analytical methods in electrochemistry}
 
-\subsection{Cyclic voltammetry}
+\subsection{Electrochemical methods}
 
-\subsection{Electrochemical impedance spectroscopy}
+\subsubsection{Electrochemical impedance spectroscopy}
 
-\subsection{Transient absorption spectroscopy}
+\subsubsection{Cyclic voltammetry}
+
+\subsection{Complementary spectroscopic methods}
+
+\subsubsection{Transient absorption spectroscopy}
 
 \end{document}
