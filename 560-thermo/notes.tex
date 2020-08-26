@@ -1,7 +1,7 @@
 %% File              : notes.tex
 %% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
 %% Date              : 2020-04-12T16:57:32+0800
-%% Last Modified Date: 2020-08-13T13:35:17+0800
+%% Last Modified Date: 2020-08-14T02:31:23+0800
 %% Last Modified By  : Wayne Yeo [fishnsotong@superheated] <wwzyeo@gmail.com>
 
 \documentclass{article}
@@ -66,7 +66,7 @@
   This course deals primarily with equilibrium properties of macroscopic
   systems, basic thermodynamics, chemical equilibirum of reactions in gas and
   solution phase, and rates of chemical reactions. Additional topics include
-  electrochemistry, catalysis and enzyme kinetics.
+  electrochemistry, photochemistry, catalysis and enzyme kinetics.
 \end{abstract}
 
 \tableofcontents
@@ -185,6 +185,20 @@ a sign convention that is \textit{additive} in nature. $q$ represents the heat
 absorbed \textit{by} the system, and $w$ represents work done \textit{on} the
 system.
 
+
+\begin{definition}[First Law of Thermodynamics]
+The internal energy $\Delta U$ changes only when a system takes up or gives off
+heat $q$ or work $w$.
+
+  \begin{equation}
+    \Delta U = q + w
+  \end{equation}
+\end{definition}
+
+This is a statement of the equivalence of heat and work. The internal energy of
+an isolated system is constant; if $\Delta U$ increases in the system, the
+energy decreases in the surroundings.
+
 \section{Internal energy, expansion work}
 
 \subsection{Expansion work} 
@@ -215,6 +229,8 @@ When the external pressure is zero, the system does no work as it expands,
 because it has nothing to push against. This is a \textbf{free expansion}.
 
 \subsubsection{Reversible changes}
+
+
 Expansions where $p = p_{ext}$. That is, adjusting hypothetical weights on the
 piston as the gas is expanding to ensure the above condition. This is to ensure
 that $p_{ext}$ is infinitesimally smaller than $p$ at each step of the process.
@@ -235,12 +251,13 @@ that $p_{ext}$ is infinitesimally smaller than $p$ at each step of the process.
 \end{equation}
 
 \begin{justification}
-  For an isothermal system, $\Delta U = 0$. According to the \textbf{First Law of Thermodynamics}, $-w = q$. Thus, we can see that
+  For an isothermal system, $\Delta U = 0$. According to the \textbf{First Law
+  of Thermodynamics}, $-w = q$. Thus, we can see that
   \begin{equation*}
       q = nRT\ln{\frac{V_f}{V_i}}.
-  \end{equation*}
-Which can be rearranged to give $\Delta S$. Because $S$ is a state function and is independent of the path taken, the expression below is valid
-regardless of the reversibility of the expansion.
+  \end{equation*} Which can be rearranged to give $\Delta S$. Because $S$ is a
+  state function and is independent of the path taken, the expression below is
+  valid regardless of the reversibility of the expansion.
 \end{justification}
 
 \section{Enthalpy}
@@ -276,9 +293,13 @@ enthalpy of the system.
     \end{split}
   \end{equation*}
   
-  Which is known as the \textit{complete differential} of the definition of enthalpy.
+  Which is known as the \textit{complete differential} of the definition of
+  enthalpy.
 
-  By the \textbf{First Law of Thermodynamics} $\mathrm{d}U = \mathrm{d}q + \mathrm{d}w$, the term $\mathrm{d}w = -p\mathrm{d}V$ can be substituted into the complete differential as a system under mechanical equilibrium does only expansion work.
+  By the \textbf{First Law of Thermodynamics} $\mathrm{d}U = \mathrm{d}q +
+  \mathrm{d}w$, the term $\mathrm{d}w = -p\mathrm{d}V$ can be substituted into
+  the complete differential as a system under mechanical equilibrium does only
+  expansion work.
   
   \begin{equation*}
     \begin{split}
@@ -299,6 +320,8 @@ Finally, the condition of \textit{constant pressure} is imposed on the system, w
 From the above justification, we can see why $H$ is a good measure of the energy transferred as heat in the various bond-forming and bond-breaking transformations that we encounter in chemistry, which we often invoke in thermochemical calculations.
 
 \section{Adiabatic changes}
+
+\textbf{Adiabatic processes} occur without transfer of energy as heat.
 
 \section{Thermochemistry}
 
@@ -438,6 +461,27 @@ involved in ligand-receptor binding.
 
 \section{Introduction to electrochemistry}
 
+A simple example of energy storage is the \textbf{capacitor}. Capacitance is
+defined as a constant
+
+\begin{equation}
+  C = \frac{Q}{V_c}.
+\end{equation}
+
+The current is
+
+\begin{equation}
+  I = -\frac{\mathrm{d}Q}{\mathrm{d}t} = -C \frac{\mathrm{d}V_c}{\mathrm{d}t}.
+\end{equation}
+
+Capacitors in general, fail as an energy storage device due to their lower
+specific energy compared to batteries. However, they do have a number of
+compelling properties. Storing power as electrical charge rather than chemical
+potential has its benefits: this typically allows near instant charge times, and
+very high peak output currents. In addition, they can survive many more (around
+by a factor of ~$10^3$!) more charge-discharge cycles than fully-cycled
+batteries.
+
 \section{The electrochemical cell}
 
 \section{Potentials, interfaces, electrodes and mass transport}
@@ -466,8 +510,20 @@ involved in ligand-receptor binding.
 
 \subsubsection{Cyclic voltammetry}
 
+\subsubsection{Catalytic peak current analysis}
+
+\subsubsection{Foot-of-the-wave analysis}
+
+\subsubsection{Peak shift analysis}
+
 \subsection{Complementary spectroscopic methods}
 
+\subsubsection{Spectroelectrochemistry}
+
+\subsubsection{Stopped-flow rapid mixing}
+
 \subsubsection{Transient absorption spectroscopy}
+
+\part{Photochemistry}
 
 \end{document}
