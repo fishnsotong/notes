@@ -1,0 +1,156 @@
+%% File              : notes.tex
+%% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
+%% Date              : 2020-04-12T16:57:32+0800
+%% Last Modified Date: 2020-08-26T15:48:07+0800
+%% Last Modified By  : Wayne Yeo [fishnsotong@superheated] <wwzyeo@gmail.com>
+
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{physics} \usepackage{titlesec}
+\usepackage{achemso}
+\usepackage{chemmacros}
+  \chemsetup{modules={all}}
+
+\usepackage{epigraph}
+\setlength\epigraphwidth{10cm}
+
+\hyphenpenalty=1000
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{Corollary}
+\numberwithin{corollary}{section}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{postulate}{Postulate}
+\numberwithin{postulate}{section}
+\newtheorem*{postulate*}{Postulate}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{section}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{definition}{Definition}
+\numberwithin{definition}{section}
+\newtheorem*{definition*}{Definition}
+\newenvironment{justification} {\begin{proof}[Justification]} {\end{proof}}
+
+
+\titleformat
+{\part} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Part \ \thepart} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\title{Non-equilibrium systems and molecular machines}
+\author{Wayne Yeo Wei Zhong}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  This course deals primarily with non-equilibrium properties of familiar
+  chemical systems, and builds a theoretical foundation explaining the frontier
+  topics of molecular switches, motors and replicators.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section*{\centering{Useful Relations}}
+\bigskip
+
+\begin{equation*}
+  \Delta_r G^{\standardstate} = -RT\ln{K}
+\end{equation*}
+
+\newpage
+
+\part{Non-equilibrium systems}
+
+\epigraph{[\textbf{Thermodynamics} is] the only physical theory of universal
+content concerning which I am convinced that, within the framework of the
+applicability of its basic concepts, it will never be overthrown.}{Einstein}
+
+The primary objective of chemical thermodynamics is the establishment of a
+criterion to determine the feasibility or spontaneity of a given
+transformation. Some examples of processes that we consider are chemical
+reactions, phase changes and the formation of solutions. 
+
+The thermodynamic description of these chemical systems employ the \textbf{laws
+of thermodynamics}, that form an axiomatic basis. The first law specifies that
+energy can be exchanged between physical systems as heat and work.
+The second law defines the existence of a quantity called entropy, that
+describes the thermodynamic direction in which the system can evolve.
+
+In thermodynamics, we make certain distinctions about what the system is. The
+\textbf{thermodynamic system} is a precisely defined region of the universe
+under study. Everything in the universe except the system is called the
+surroundings.
+
+In conclusion, in thermodynamics we consider whether these processes \textit{can
+happen}, and \textit{to what extent} they happen. It is important to note that
+thermodynamics remains silent regarding \textit{how fast} they occur, which will
+be dealt with in kinetics at a later stage.
+
+\subsection{Further reading}
+
+\subsubsection{Books}
+At the moment, I'm trying to decide upon whether Atkins or McQuarrie gives a
+better treatment on the subject. Perhaps, by the time I'm done with these notes,
+I'll be better prepared to say.
+
+\begin{itemize}
+
+  \item James Keeler and Peter Wothers \textit{Why Chemical Reactions Happen},
+    Oxford University Press, 2003: a qualitative, accessible explanation of the
+    motivating ideas
+
+  \item Peter Atkins and Julio de Paula \textit{Physical Chemistry}, Oxford
+    University Press
+\end{itemize}
+
+\setcounter{section}{0}
+\section{States, equations of state, 0th law}
+
+\subsection{Laws of thermodynamics}
+
+\paragraph{0th law of thermodynamics.} If $A$ and $B$ are in thermal equilibrium
+and $B$ and $C$ are in thermal equilibrium, then $A$ and $C$ are in thermal 
+equilibrium. \textit{Defines Kelvin scale.}
+
+\paragraph{1st law of thermodynamics.} $U$ is conserved. \textit{You can break
+even.}
+
+\begin{equation}
+  \mathrm{d}w + \mathrm{d}q = \mathrm{d}U
+\end{equation}
+
+\paragraph{2nd law of thermodynamics.} Defines entropy and the direction of
+time. \textit{You can break even at 0 K}.
+
+\begin{equation}
+  \Delta S = \int \frac{\textnormal{d} q_{\mathrm{rev}}}{T}
+\end{equation}
+
+\paragraph{3rd law of thermodynamics.} Defines the absolute scale of $T$. For
+pure crystal, $S \rightarrow 0$ as $T \rightarrow 0$. \textit{You can never
+reach 0 K}.
+
+\part{Molecular machines}
+
+\end{document}
