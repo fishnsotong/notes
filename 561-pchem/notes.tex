@@ -1,0 +1,137 @@
+%% File              : notes.tex
+%% Author            : Wayne Yeo [fishnsotong] <wwzyeo@gmail.com>
+%% Date              : 2020-04-12T16:57:32+0800
+%% Last Modified Date: 2020-08-13T13:35:17+0800
+%% Last Modified By  : Wayne Yeo [fishnsotong@superheated] <wwzyeo@gmail.com>
+
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{physics}
+\usepackage{titlesec}
+\usepackage{achemso}
+\usepackage{chemmacros}
+  \chemsetup{modules={all}}
+
+\usepackage{epigraph}
+\setlength\epigraphwidth{10cm}
+
+\hyphenpenalty=1000
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{section}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}{Corollary}
+\numberwithin{corollary}{section}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{postulate}{Postulate}
+\numberwithin{postulate}{section}
+\newtheorem*{postulate*}{Postulate}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{section}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{definition}{Definition}
+\numberwithin{definition}{section}
+\newtheorem*{definition*}{Definition}
+\newenvironment{justification} {\begin{proof}[Justification]} {\end{proof}}
+
+
+\titleformat
+{\part} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Part \ \thepart} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+% START EDITING HERE
+
+\title{5.61 Physical Chemistry}
+\author{Wayne Yeo Wei Zhong}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  This course is an introduction to quantum mechanics, with utility in chemistry. Topics include particle and wave mechanics, semi-classical quantum mechanics, matrix mechanics, perturbation theory, molecular orbital theory, molecular structure, molecular spectroscopy, and photochemistry. Emphasis is on creating and building confidence in the use of intuitive pictures.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section*{\centering{Useful Relations}}
+\bigskip\bigskip
+
+\paragraph{Particle in a box}
+
+\begin{equation*}
+  \psi_{n} = \sqrt{\frac{2}{L}}\sin{\left(\frac{nx\pi}{L}\right)}
+\end{equation*}
+
+\paragraph{Harmonic oscillator}
+\begin{align*}
+  V(x) &= \frac{k}{2}x^2 \\ \\
+  E_v &= \hbar \sqrt{\frac{k}{\mu}}\left( v + \frac{1}{2} \right)
+\end{align*}
+
+where $v = 0, 1, 2\dots$ for a system with reduced mass
+
+\paragraph{Rigid rotator}
+\begin{equation*}
+  E_J = \left(\frac{\hbar^2}{2I}\right)J(J+1)
+\end{equation*}
+
+\paragraph{Hydrogen atom}
+\begin{align*}
+  V(r) &= \frac{-Z\abs{e}^2}{4\pi\epsilon_0r} \\ \\
+  E_n &= \frac{-Z^2e^2}{\pi\epsilon_0a_0n^2}
+\end{align*}
+
+\newpage
+
+\setcounter{section}{0}
+\section{Quantum Theory}
+
+\epigraph{Die Quantenmechanik ist sehr achtung-gebietend. Aber eine innere Stimme sagt mir, daß das doch nicht der wahre Jakob ist. Die Theorie liefert viel, aber dem Geheimnis des Alten bringt sie uns kaum näher. \textbf{Jedenfalls bin ich überzeugt, daß der nicht würfelt.}}{Einstein}
+
+\subsection{Introduction and historical background}
+The focus of modern physical chemistry is on the molecule. To fully comprehend the molecule, we must step away from what we perceivably understand perfectly in the macroscopic world.
+
+In the microscopic world, observation modifies the system, and any interaction with an evolving system will affect what you observe. Because we cannot observe evolving systems without destroying them, quantum mechanics provides us a formal structure and measurement theory to peer inside the molecule, understand its structure, and ultimately calculate the time-dependence of such systems.
+
+\paragraph*{Lack of determinism.} If you do a series of identical experiments carefully, you get different results.
+
+\paragraph{Wave-particle duality.}Everything shares both particle and wave properties.
+
+\paragraph{Energy quantisation. }
+
+\subsection{The photoelectric effect}
+
+\subsection{Compton scattering}
+
+In this section, we see two types of evidence supporting the behaviour of light as a \textit{particle}.
+\begin{enumerate}
+  \item Photoelectric effect: light exists as discrete packets of energy: the \textbf{photon} with $E = h\nu$ 
+  \item Compton scattering: light packets possess definite momentum
+\end{enumerate}
+
+Now, we turn our attention to the \textbf{electron} – a far more massive particle, and look at evidence for its wave nature.
+
+\subsection{The Rutherford planetary atom}
+
+\section{The Classical Wave Equation}
+
+\end{document}
